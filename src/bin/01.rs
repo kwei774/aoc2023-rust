@@ -8,6 +8,10 @@ pub fn part_two(input: &str) -> Option<u32> {
     None
 }
 
+pub fn first_function() -> i32 {
+    return 10
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -25,8 +29,14 @@ mod tests {
     }
 
     #[test]
-    fn test_hello_world () {
+    fn test_print_hello_world () {
         println!("hello world");
         assert_eq!(1, 1);
+    }
+
+    #[test]
+    fn test_return_integer () {
+        let expected = 10;
+        assert_eq!(first_function(), expected);
     }
 }
